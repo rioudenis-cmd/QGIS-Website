@@ -1,3 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<qgis projectname="Carrieres_RA" version="3.28.0">
+  <layer-tree-group name="Carrières Rhône-Alpes">
+    <layer-tree-layer name="Carrières AuRA (WFS filtré)" id="carrieres_wfs" source="url=https://datacarto.open-datara.fr/wfs/99448a13-e009-4bb2-bb2b-755aec6ecead|typename=l_carriere_s_r84|version=1.0.0" provider="WFS" />
+  </layer-tree-group>
+  <maplayer type="vector" name="Carrières AuRA (WFS filtré)" id="carrieres_wfs" geometry="Point" provider="WFS">
+    <datasource>url=https://datacarto.open-datara.fr/wfs/99448a13-e009-4bb2-bb2b-755aec6ecead|typename=l_carriere_s_r84|version=1.0.0</datasource>
+    <layername>Carrières AuRA (WFS filtré)</layername>
+    <srs>
+      <spatialrefsys>
+        <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
+        <srid>4326</srid>
+        <authid>EPSG:4326</authid>
+      </spatialrefsys>
+    </srs>
+    <renderer-v2 type="singleSymbol" symbollevels="0">
+      <symbols>
+        <symbol name="0" type="marker" alpha="1" clip_to_extent="1">
+          <layer class="SimpleMarker" locked="0">
+            <prop k="color" v="64,181,246,255"/>
+            <prop k="outline_color" v="26,35,126,255"/>
+            <prop k="outline_width" v="0.5"/>
+            <prop k="size" v="3"/>
+            <prop k="name" v="circle"/>
+          </layer>
+        </symbol>
+      </symbols>
+    </renderer-v2>
+    <layer-opacity>1</layer-opacity>
+    <layer-geometry-type>Point</layer-geometry-type>
+    <layer-filter>"code_insee" LIKE '01%' OR "code_insee" LIKE '38%' OR "code_insee" LIKE '69%' OR "code_insee" LIKE '73%' OR "code_insee" LIKE '74%'</layer-filter>
+  </maplayer>
+</qgis>
 ---
 type: "page"
 title: "Thank you for choosing QGIS!"
